@@ -1,0 +1,40 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"definitions": {
+		
+	},
+	"title": "Comida",
+	"type": "object",
+	"properties": {
+		"nome": {
+			"type": "string",
+			"description": "Nome da comida."
+		},
+		"ingredientes": {
+			"type": "array",
+			"description": "Lista dos ingredientes principais.",
+			"minItems": 1,
+			"items": {
+				"type": "string",
+				"description": "Ingrediente"
+			}
+		},
+		"categoria": {
+			"type": "string",
+			"description": "Categoria do produto.",
+			"enum": [
+				"CARNE_VACA",
+				"CARNE_PORCO",
+				"CARNE_PEIXE",
+				"VEGANO",
+				"VEGETARIANO",
+				"SAUDAVEL",
+				"CAFE_DA_MANHA"
+			]
+		}
+	},
+	"required": [
+		"nome",
+		"categoria"
+	]
+}

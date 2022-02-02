@@ -3,6 +3,7 @@ package gui.testes.camel.http;
 import org.apache.camel.CamelContext;
 import org.apache.camel.Exchange;
 import org.apache.camel.builder.RouteBuilder;
+import org.apache.camel.component.http.HttpMethods;
 import org.apache.camel.impl.DefaultCamelContext;
 
 public class RequisicaoHttp {
@@ -17,6 +18,7 @@ public class RequisicaoHttp {
 
 				from("timer://simpleTimer?repeatCount=1") // cria um timer que executa apenas uma vez
 				.log("Fazendo requisição para lista de comidas")
+				.setHeader(Exchange.HTTP_METHOD, HttpMethods.GET)
 				.to("http://localhost:8080/comidas") // faz a requisição
 					.process(exchange -> {
 						String response = exchange.getIn().getBody(String.class); // recupera a resposta da requisição

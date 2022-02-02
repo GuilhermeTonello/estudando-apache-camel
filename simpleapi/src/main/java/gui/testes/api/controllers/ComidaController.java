@@ -7,6 +7,8 @@ import java.util.UUID;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -38,6 +40,12 @@ public class ComidaController {
 				.filter(comida -> comida.getId().equals(id) )
 				.findFirst()
 				.orElseThrow(() -> new RuntimeException("Comida não encontrada!"));
+	}
+	
+	@PostMapping
+	public void save(@RequestBody Comida comida) {
+		comida.setId(UUID.randomUUID());
+		comidas.add(comida);
 	}
 	
 }
