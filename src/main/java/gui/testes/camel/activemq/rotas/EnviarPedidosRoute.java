@@ -14,7 +14,7 @@ public class EnviarPedidosRoute extends RouteBuilder {
 				.maximumRedeliveries(2) // se der erro, ele tenta enviar um total de 2 vezes
 				.redeliveryDelay(2 * 1000) // tenta enviar novamente depois de 2 segundos
 				.onRedelivery(new RedeliveryEnvioPedidoProcessor()) // quando tentar enviar novamente, ele executa esse processador
-				.onExceptionOccurred(new FalhaNoEnvioPedidoProcessor()) // quando falhar, ele executa esse processador
+				.onExceptionOccurred(new FalhaNoEnvioPedidoProcessor()) // quando acontecer uma exception, ele executa esse processador
 			);
 		
 		from("file:pedidos?noop=true") // pega os arquivos da pasta pedidos
