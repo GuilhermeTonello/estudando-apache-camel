@@ -4,12 +4,14 @@
 		{
 			"nome": "Água",
 			"quantidade": 5,
-			"valorUnitario": 4.99
+			"valorUnitario": 4.99,
+			"categoria": "ALIMENTOS"
 		},
 		{
 			"nome": "Pneu",
 			"quantidade": 4,
-			"valorUnitario": 100
+			"valorUnitario": 100,
+			"categoria": "CARRO"
 		}
 	],
 	"endereco": {

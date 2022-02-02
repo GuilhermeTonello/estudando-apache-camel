@@ -1,0 +1,16 @@
+{
+	"nome": "Zé",
+	"itens": [
+		{
+			"nome": "Queijo Mussarela",
+			"quantidade": 1,
+			"valorUnitario": 40.99,
+			"categoria": "ALIMENTOS"
+		}
+	],
+	"endereco": {
+		"cep": "11111-111",
+		"rua": "Rua Tangamandápio",
+		"complemento": "Número 52"
+	}
+}
