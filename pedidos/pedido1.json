@@ -1,0 +1,20 @@
+{
+	"nome": "Guilherme",
+	"itens": [
+		{
+			"nome": "Água",
+			"quantidade": 5,
+			"valorUnitario": 4.99
+		},
+		{
+			"nome": "Pneu",
+			"quantidade": 4,
+			"valorUnitario": 100
+		}
+	],
+	"endereco": {
+		"cep": "00000-000",
+		"rua": "Rua dos Bananas de Pijamas",
+		"complemento": "Número 351, apartamento 11"
+	}
+}
