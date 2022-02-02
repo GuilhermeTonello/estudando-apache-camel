@@ -1,0 +1,80 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"definitions": {
+		
+	},
+	"title": "Pedido",
+	"type": "object",
+	"properties": {
+		"nome": {
+			"type": "string",
+			"description": "Nome de quem faz o pedido."
+		},
+		"itens": {
+			"type": "array",
+			"description": "Lista de itens do pedido.",
+			"minItems": 1,
+			"items": {
+				"type": "object",
+				"description": "Lista de itens do pedido.",
+				"properties": {
+					"nome": {
+						"type": "string",
+						"description": "Nome do produto."
+					},
+					"quantidade": {
+						"type": "integer",
+						"description": "Quantidade do produto que irá ser comprada.",
+						"minimum": 1
+					},
+					"valorUnitario": {
+						"type": "number",
+						"description": "Valor unitário do produto.",
+						"minimum": 0.0
+					},
+					"categoria": {
+						"type": "string",
+						"description": "Categoria do produto.",
+						"enum": [
+							"ALIMENTOS",
+							"CARRO",
+							"ELETRONICOS"
+						]
+					}
+				},
+				"required": [
+					"nome",
+					"quantidade",
+					"valorUnitario",
+					"categoria"
+				]
+			}
+		},
+		"endereco": {
+			"type": "object",
+			"description": "Endereço de envio do pedido.",
+			"properties": {
+				"cep": {
+					"type": "string",
+					"description": "CEP do endereço para onde o pedido vai ser enviado."
+				},
+				"rua": {
+					"type": "string",
+					"description": "Rua do endereço para onde o pedido vai ser enviado."
+				},
+				"complemento": {
+					"type": "string",
+					"description": "Complemento (apartamento, número etc) do endereço para onde o pedido vai ser enviado."
+				}
+			},
+			"required": [
+				"cep",
+				"rua",
+				"complemento"
+			]
+		}
+	},
+	"required": [
+		"nome"
+	]
+}

@@ -1,5 +1,5 @@
 {
-	"nome": "Zé",
+	"nome": "ZÃ©",
 	"itens": [
 		{
 			"nome": "Queijo Mussarela",
@@ -10,7 +10,7 @@
 	],
 	"endereco": {
 		"cep": "11111-111",
-		"rua": "Rua Tangamandápio",
-		"complemento": "Número 52"
+		"rua": "Rua TangamandÃ¡pio",
+		"complemento": "NÃºmero 52"
 	}
 }

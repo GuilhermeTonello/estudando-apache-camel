@@ -2,7 +2,7 @@
 	"nome": "Guilherme",
 	"itens": [
 		{
-			"nome": "¡gua",
+			"nome": "√Ågua",
 			"quantidade": 5,
 			"valorUnitario": 4.99,
 			"categoria": "ALIMENTOS"
@@ -17,6 +17,6 @@
 	"endereco": {
 		"cep": "00000-000",
 		"rua": "Rua dos Bananas de Pijamas",
-		"complemento": "N˙mero 351, apartamento 11"
+		"complemento": "N√∫mero 351, apartamento 11"
 	}
 }

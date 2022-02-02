@@ -1,0 +1,16 @@
+{
+	"nome": "Zubumafu",
+	"itens": [
+		{
+			"nome": "TV",
+			"quantidade": 1,
+			"valorUnitario": 4000,
+			"categoria": "ELETRODOMESTICOS"
+		}
+	],
+	"endereco": {
+		"cep": "22222-222",
+		"rua": "Praça da Sé",
+		"complemento": "número 60, bloco B, ap. 78"
+	}
+}

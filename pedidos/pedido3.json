@@ -2,7 +2,7 @@
 	"nome": "Zubumafu",
 	"itens": [
 		{
-			"nome": "",
+			"nome": "Gasolina",
 			"quantidade": 2,
 			"valorUnitario": 30,
 			"categoria": "CARRO"
@@ -16,7 +16,7 @@
 	],
 	"endereco": {
 		"cep": "22222-222",
-		"rua": "Praça da Sé",
-		"complemento": "número 60, bloco B, ap. 78"
+		"rua": "PraÃ§a da SÃ©",
+		"complemento": "nÃºmero 60, bloco B, ap. 78"
 	}
 }

@@ -1,10 +1,10 @@
-package gui.testes.camel;
+package gui.testes.camel.activemq;
 
 import org.apache.camel.CamelContext;
 import org.apache.camel.component.activemq.ActiveMQComponent;
 import org.apache.camel.impl.DefaultCamelContext;
 
-import gui.testes.camel.rotas.FinalizarPedidosRoute;
+import gui.testes.camel.activemq.rotas.FinalizarPedidosRoute;
 
 public class FinalizarPedidos {
 

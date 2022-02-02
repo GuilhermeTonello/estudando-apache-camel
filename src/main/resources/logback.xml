@@ -1,18 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-	<appender name="STDOUT"
-		class="ch.qos.logback.core.ConsoleAppender">
-		<encoder>
-			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
-			</pattern>
-		</encoder>
+	<shutdownHook/>
+	<appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+ 	   	<encoder>
+      		<pattern>%d{HH:mm:ss.SSS} - %level - %msg%n</pattern>
+    	</encoder>
 	</appender>
 
-	<!--
-	<root level="debug">
-		<appender-ref ref="STDOUT" />
+	<root name="gui.testes.camel" level="debug">
+		<appender-ref ref="Console" />
 	</root>
-	-->
+	<root name="org.apache.camel" level="warn">
+		<appender-ref ref="Console" />
+	</root>
 	<root level="info">
-		<appender-ref ref="STDOUT" />
+		<appender-ref ref="Console" />
 	</root>
+
 </configuration>
