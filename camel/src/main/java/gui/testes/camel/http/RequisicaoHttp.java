@@ -23,6 +23,7 @@ public class RequisicaoHttp {
 						exchange.getMessage().setBody(response); // coloca como corpo da mensagem a resposta da requisição
 					})
 					.setHeader(Exchange.FILE_NAME, constant("comidas.json")) // coloca o nome do arquivo como comidas.json
+					.log("Salvando comidas.json na pasta http")
 				.to("file:http"); // salva o arquivo nessa pasta
 			}
 			
