@@ -1,0 +1,6 @@
+<pagamento>
+	<remetente>João</remetente>
+	<valor>699.99</valor>
+	<destinatario>Amazon</destinatario>
+	<tipoPagamento>BOLETO</tipoPagamento>
+</pagamento>

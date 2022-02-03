@@ -1,0 +1,6 @@
+<pagamento>
+	<remetente>Zé</remetente>
+	<valor>120</valor>
+	<destinatario>Amazon</destinatario>
+	<tipoPagamento>CARTAO</tipoPagamento>
+</pagamento>

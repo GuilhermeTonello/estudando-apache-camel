@@ -1,26 +1,28 @@
-<LinkedHashMap>
+<Pedido>
   <nome>Guilherme</nome>
   <itens>
-    <nome>Água</nome>
-    <quantidade>5</quantidade>
-    <valorUnitario>4.99</valorUnitario>
-    <categoria>ALIMENTOS</categoria>
-  </itens>
-  <itens>
-    <nome>Pêra</nome>
-    <quantidade>15</quantidade>
-    <valorUnitario>1.99</valorUnitario>
-    <categoria>ALIMENTOS</categoria>
-  </itens>
-  <itens>
-    <nome>Pneu</nome>
-    <quantidade>4</quantidade>
-    <valorUnitario>100</valorUnitario>
-    <categoria>CARRO</categoria>
+    <itens>
+      <nome>Água</nome>
+      <quantidade>5</quantidade>
+      <valorUnitario>4.99</valorUnitario>
+      <categoria>ALIMENTOS</categoria>
+    </itens>
+    <itens>
+      <nome>Pêra</nome>
+      <quantidade>15</quantidade>
+      <valorUnitario>1.99</valorUnitario>
+      <categoria>ALIMENTOS</categoria>
+    </itens>
+    <itens>
+      <nome>Pneu</nome>
+      <quantidade>4</quantidade>
+      <valorUnitario>100.0</valorUnitario>
+      <categoria>CARRO</categoria>
+    </itens>
   </itens>
   <endereco>
     <cep>00000-000</cep>
     <rua>Rua dos Bananas de Pijamas</rua>
     <complemento>Número 351, apartamento 11</complemento>
   </endereco>
-</LinkedHashMap>
+</Pedido>

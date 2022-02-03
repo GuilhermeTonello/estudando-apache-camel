@@ -11,48 +11,54 @@
 	</properties>
 
 	<dependencies>
+		<!-- Apache Camel -->
 		<dependency>
 			<groupId>org.apache.camel</groupId>
 			<artifactId>camel-core</artifactId>
 			<version>${camel.version}</version>
 		</dependency>
 
+		<!-- Adiciona suporte ao ActiveMQ  -->
 		<dependency>
 			<groupId>org.apache.camel</groupId>
 			<artifactId>camel-activemq</artifactId>
 			<version>${camel.version}</version>
 		</dependency>
 
+		<!-- JsonValidator, permite validar jsons a partir de schemas -->
 		<dependency>
 			<groupId>org.apache.camel</groupId>
 			<artifactId>camel-json-validator</artifactId>
 			<version>${camel.version}</version>
 		</dependency>
 
+		<!-- JsonPath, permite escrever expressões para busca em jsons -->
 		<dependency>
 			<groupId>org.apache.camel</groupId>
 			<artifactId>camel-jsonpath</artifactId>
 			<version>${camel.version}</version>
 		</dependency>
 
+		<!-- Jackson para JSON e XML -->
 		<dependency>
 			<groupId>org.apache.camel</groupId>
 			<artifactId>camel-jackson</artifactId>
 			<version>${camel.version}</version>
 		</dependency>
-
 		<dependency>
 			<groupId>org.apache.camel</groupId>
 			<artifactId>camel-jacksonxml</artifactId>
 			<version>${camel.version}</version>
 		</dependency>
 
+		<!-- Http, permite fazer requisições http (apenas como producer) -->
 		<dependency>
 		    <groupId>org.apache.camel</groupId>
 		    <artifactId>camel-http</artifactId>
 		    <version>${camel.version}</version>
 		</dependency>
 
+		<!-- Logback para fazer logs -->
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>

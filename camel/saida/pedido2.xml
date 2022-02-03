@@ -1,14 +1,16 @@
-<LinkedHashMap>
+<Pedido>
   <nome>Zé</nome>
   <itens>
-    <nome>Queijo Mussarela</nome>
-    <quantidade>1</quantidade>
-    <valorUnitario>40.99</valorUnitario>
-    <categoria>ALIMENTOS</categoria>
+    <itens>
+      <nome>Queijo Mussarela</nome>
+      <quantidade>1</quantidade>
+      <valorUnitario>40.99</valorUnitario>
+      <categoria>ALIMENTOS</categoria>
+    </itens>
   </itens>
   <endereco>
     <cep>11111-111</cep>
     <rua>Rua Tangamandápio</rua>
     <complemento>Número 52</complemento>
   </endereco>
-</LinkedHashMap>
+</Pedido>

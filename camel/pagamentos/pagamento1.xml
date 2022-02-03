@@ -1,0 +1,6 @@
+<pagamento>
+	<remetente>Guilherme</remetente>
+	<valor>500.99</valor>
+	<destinatario>Casas Bahia</destinatario>
+	<tipoPagamento>BOLETO</tipoPagamento>
+</pagamento>

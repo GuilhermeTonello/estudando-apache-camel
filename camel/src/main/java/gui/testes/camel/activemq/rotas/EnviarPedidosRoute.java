@@ -9,7 +9,7 @@ public class EnviarPedidosRoute extends RouteBuilder {
 
 	@Override
 	public void configure() throws Exception {
-		errorHandler(
+		errorHandler( // errorHandler sempre deve ser a primeira coisa
 				deadLetterChannel("activemq:queue:pedidos.DLQ") // se der erro, envia para a queue pedidos.DLQ
 				.maximumRedeliveries(2) // se der erro, ele tenta enviar um total de 2 vezes
 				.redeliveryDelay(2 * 1000) // tenta enviar novamente depois de 2 segundos
