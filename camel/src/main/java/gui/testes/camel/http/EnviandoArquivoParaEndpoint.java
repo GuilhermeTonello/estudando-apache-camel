@@ -22,20 +22,24 @@ public class EnviandoArquivoParaEndpoint {
 						.maximumRedeliveries(3)
 						.redeliveryDelay(2 * 1000)
 						.onRedelivery(exchange -> {
-							System.out.println("Erro ao enviar arquivo. Tentando novamente!");
+							String arquivo = (String) exchange.getIn().getHeader(Exchange.FILE_NAME);
+							System.out.println("Erro ao enviar arquivo " + arquivo + ". Tentando novamente!");
 						})
 						.onExceptionOccurred(exchange -> {
-							String erro = (String) exchange.getIn().getBody();
+					        Throwable ex = exchange.getProperty(Exchange.EXCEPTION_CAUGHT, Throwable.class);
+					        exchange.getIn().setBody(ex.getMessage());
+					        String erro = (String) exchange.getIn().getBody();
+					        
 							System.out.println("Falha ao enviar arquivo!");
 							System.out.println(erro);
 						})
 					);
 				
-				from("file:comidas?noop=true")
-				.to("json-validator:comida-schema.json")
-					.setHeader(Exchange.HTTP_METHOD, HttpMethods.POST)
-					.setHeader(Exchange.CONTENT_TYPE, constant("application/json"))
-				.to("http://localhost:8080/comidas")
+				from("file:comidas?noop=true") // resgatando os arquivos
+				.to("json-validator:comida-schema.json") // validando o json
+					.setHeader(Exchange.HTTP_METHOD, HttpMethods.POST) // usando método POST
+					.setHeader(Exchange.CONTENT_TYPE, constant("application/json")) // usando ContentType como application/json para o backend aceitar
+				.to("http://localhost:8080/comidas") // enviando a requisição
 				.log("Salvando ${file:name}");
 			}
 			
