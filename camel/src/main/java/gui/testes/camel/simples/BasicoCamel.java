@@ -28,7 +28,7 @@ public class BasicoCamel {
 						.jacksonxml(true) // convertendo para xml. esse 'true' é para fazer a identação das linhas
 					.setHeader(Exchange.FILE_NAME, simple("${file:name.noext}.xml"))
 					.log("Convertendo arquivo ${file:name} para ${file:name.noext}.xml")
-				.to("file:saida"); // enviando a resposta para a pasta saida
+				.to("file:saida/pedidos"); // enviando a resposta para a pasta saida
 			}
 			
 		});
