@@ -1,10 +1,23 @@
 package gui.testes.camel.models;
 
-public class Endereco {
+import java.io.Serializable;
 
+public class Endereco implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+	
 	private String cep;
 	private String rua;
 	private String complemento;
+	
+	public Endereco() {
+	}
+	
+	public Endereco(String cep, String rua, String complemento) {
+		this.cep = cep;
+		this.rua = rua;
+		this.complemento = complemento;
+	}
 
 	public String getCep() {
 		return cep;
