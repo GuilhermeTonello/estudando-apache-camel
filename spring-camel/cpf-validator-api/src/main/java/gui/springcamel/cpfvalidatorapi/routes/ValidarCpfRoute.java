@@ -23,7 +23,8 @@ public class ValidarCpfRoute extends RouteBuilder {
 				.log("Validando cpf ${header.cpf}")
 				.bean(ValidarCpfService.class, "cpfValido(${header.cpf})")
 				.marshal()
-					.json();
+					.json()
+		.endRest();
 		
 	}
 	
