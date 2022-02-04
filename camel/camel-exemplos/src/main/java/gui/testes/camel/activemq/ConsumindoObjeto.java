@@ -1,8 +1,12 @@
 package gui.testes.camel.activemq;
 
+import java.util.Arrays;
+
+import org.apache.activemq.ActiveMQConnectionFactory;
 import org.apache.camel.CamelContext;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.component.activemq.ActiveMQComponent;
+import org.apache.camel.component.jms.JmsComponent;
 import org.apache.camel.impl.DefaultCamelContext;
 
 import gui.testes.camel.models.Endereco;
@@ -12,9 +16,13 @@ public class ConsumindoObjeto {
 	public static void main(String[] args) throws Exception {
 		
 		CamelContext c = new DefaultCamelContext();
-		ActiveMQComponent activeMq = ActiveMQComponent.activeMQComponent("tcp://localhost:61616");
-		activeMq.setTrustAllPackages(true);
-		c.addComponent("activemq", activeMq);
+		ActiveMQConnectionFactory factory = new ActiveMQConnectionFactory("tcp://localhost:61616");
+		factory.setTrustedPackages(Arrays.asList("gui.testes.camel.models"));
+		
+		JmsComponent jms = new JmsComponent();
+		jms.setConnectionFactory(factory);
+		
+		c.addComponent("activemq", jms);
 		
 		c.addRoutes(new RouteBuilder() {
 			
